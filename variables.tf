@@ -5,9 +5,14 @@ variable "client_secret" {
     #client_secret = 
 }
 
-variable "agent_count" {
+variable "node_count" {
     default = 1
 }
+
+variable "vm_size" {
+  
+}
+
 
 variable "ssh_public_key" {
     default = "~/.ssh/id_rsa.pub"
