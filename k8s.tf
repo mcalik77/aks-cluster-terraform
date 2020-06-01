@@ -28,6 +28,16 @@ resource "azurerm_kubernetes_cluster" "k8s" {
         client_id     = var.client_id
         client_secret = var.client_secret
     }
+    role_based_access_control {
+        enabled = true
+    
+    }
+
+    network_profile {
+
+        network_plugin = "azure"
+        network_policy = "azure"
+    }
 
 
     tags = {
